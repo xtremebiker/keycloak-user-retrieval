@@ -23,7 +23,7 @@ public class UserController {
 
 	@GetMapping("/api/users")
 	public List users() {
-		return restTemplate.getForEntity(URI.create(keycloakServerUrl + "/admin/realms/tcheck/users"), List.class)
+		return restTemplate.getForEntity(URI.create(keycloakServerUrl + "/admin/realms/myrealm/users"), List.class)
 				.getBody();
 	}
 
